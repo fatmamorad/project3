@@ -1,0 +1,521 @@
+/*general classes*/
+a{
+    text-decoration: none;
+    color: darkcyan;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container
+{
+
+    width:80%;
+    margin: auto;
+}
+
+.clear
+{
+    clear:both;
+}
+.overlay
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+
+}
+.btn:hover
+{
+    opacity: 0.8;
+}
+.btn{
+    width: 180px;
+    height: 60px;
+    margin: 15px;
+    font-size:25px ;
+    font-family: sans-serif;
+    border:0;
+    border-radius: 7px;
+}
+.opacity-hover
+{
+    transition: opacity 0.5s;
+}
+.opacity-hover:hover
+{
+    opacity: 0.8;
+}
+/*home*/
+
+.Header-log
+{
+    display: inline-block;
+    width: 40%;
+    float: left;
+}
+.Header-list
+{
+    width: 60%;
+    float: left;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.Header-list li{
+    list-style-type: none;
+    display: inline-block;
+}
+.Header-list a{
+    cursor: pointer;
+    padding: 15px;
+    display: block;
+    font-size: 20px;
+
+}
+.Header-list a:after
+{
+    width: 0;
+    transition: width 0.5s;
+}
+.Header-list a.active:after
+{
+    width: 100%;
+}
+.Header-list a:after,.Header-list a.active:after{
+     content: " ";
+    display: block;
+
+    height: 5px;
+    background-color:deepskyblue ;
+
+}
+.Header-list a:hover:after
+{
+    width: 100%;
+}
+.Header-content
+{
+    color:darkcyan;
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+}
+
+.section-header
+{
+    font-size: 30px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.line
+{
+    display:block;
+    background-color: deepskyblue;
+    width: 100px;
+    height: 7px;
+    margin:auto;
+    margin-bottom:15px;
+}
+.pad-top
+{
+    padding-top: 120px ;
+    padding-bottom: 60px;
+}
+
+
+
+/*k=home section*/
+
+
+
+
+
+.Home
+{
+    background-image: url(../images/background1.jpg);
+    height: 100vh;
+   background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.Home-content
+{
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+.home-title
+{
+    position: relative;
+    color: white;
+    font-size: 70px;
+}
+.title-content
+{
+    color: white;
+    font-size: 40px;
+}
+.btn-learn
+{
+    background-color:darkcyan;
+}
+/*about*/
+
+.about-content
+{
+    height: 80vh;
+
+}
+
+.about-item
+{
+    width: 30%;
+    margin-right:3%;
+    float: left;
+    text-align: center;
+    border:dimgrey solid 3px ;
+    height: 400px;
+}
+
+.mg
+{
+    margin-top: 105px;
+    width: 50px;
+}
+.about-item-tittle
+{
+    font-size: 30px;
+
+}
+.about-item-desc
+{
+    width: 380px;
+    font-size: 25px;
+    margin: auto;
+}
+.ltr-effect
+{
+    position: relative;
+}
+.mg
+{
+    color: deepskyblue;
+}
+.ltr-effect:after
+{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top:0;
+    left:0;
+    background-color: dimgrey;
+    transition: width 1s;
+    z-index: -500;
+}
+.ltr-effect:hover:after
+{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color: dimgrey;
+
+    opacity: 0.8;
+}
+.about-item:hover .about-item-tittle
+{
+    color: white;
+}
+
+.work1
+{
+    width: 29%;
+    float: left;
+    margin:15px;
+    height: 15%;
+}
+.portfolio
+{
+background-color: #f9f9f9;
+    height: 1200px;
+    width: 100%;
+}
+.portfolio-item
+{
+    width: 28%;
+    margin-left:3%;
+    float: left;
+    text-align: center;
+
+    height: 400px;
+}
+
+.portfolio-item img
+{
+  padding-bottom: 40px;
+   width: 400px;
+    height: 400px;
+}
+.category1
+{
+position: relative;
+   top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 390px;
+background-color:dimgrey;
+   opacity: 0;
+    visibility:hidden;
+    transition: visibility 0.5s;
+
+
+
+}
+
+.portfolio-item:hover .category1
+{
+    visibility: visible;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+/*service*/
+
+
+.service
+{
+
+    height: 1000px;
+}
+.service-item
+{
+    position: relative;
+    float: left;
+    width: 30%;
+    border: dimgrey solid 2px;
+    padding:20px;
+
+    margin: 1%;
+    height: 280px;
+    text-align: center;
+    top:50%;
+
+}
+.service-content
+{
+    position: absolute;
+
+    margin-left:230px
+
+}
+.service-item-tittle
+{
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 10px;
+    font-size: 40px;
+}
+
+.service-item-desc
+{
+
+    font-size: 25px;
+}
+
+.price
+{
+height: 1200px;
+    padding: 100px;
+
+}
+
+
+
+.price-item
+{
+
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 150px;
+
+    height: 600px;
+text-align: center;
+    border:dimgrey solid 2px ;
+  margin-right: 1%;
+}
+.price-content
+{
+
+    margin-left: 250px;
+   padding-top: 15px;
+}
+.price-item-content
+{
+
+    text-align: center;
+    text-align: center;
+
+    border: deepskyblue solid 2px;
+    border-radius: 70%;
+    width: 150px;
+    height: 150px;
+    padding: 30px;
+    font-size: 20px;
+    margin-left: 120px;
+    margin-bottom: 30px;
+
+}
+.price-item p
+{
+   margin-top: 25px;
+    font-size: 20px;
+}
+.btn-price
+{
+    background-color: white;
+    border: deepskyblue solid 2px;
+}
+.ov
+{
+    padding-top: 70px;
+}
+
+
+
+
+
+.ttd-effect
+{
+    position: relative;
+}
+
+.ttd-effect:after
+{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top:0;
+    left:0;
+    background-color: black;;
+    transition: height 1s;
+    z-index: -500;
+}
+.ttd-effect:hover:after
+{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color: black;
+
+    opacity: 0.8;
+
+}
+
+.price-item:hover
+{
+  color: white;
+
+}
+.team
+{
+    background-color: #f9f9f9;
+    height: 1000px;
+}
+.team-item
+{
+
+    position: relative;
+
+    text-align: center;
+
+    float: left;
+    margin: 15px;
+}
+.team-item-content
+{
+
+    width: 355px;
+    background-color:darkcyan ;
+}
+.name
+{
+    font-family: "Cascadia Code";
+    font-size: 30px;
+}
+.hover-team
+{
+
+    background-color: red;
+    top:0;
+    left:0;
+    width:200px;
+    position :absolute;
+    width:100%;
+    height: 100%;
+    background-color: dimgrey;
+    text-align: left;
+    opacity: 0;
+
+}
+.hover-team i{
+    display: block;
+    position: relative;
+    transition: opacity 0.5s;
+    width: 30px;
+    padding: 10px;
+margin-left: 300px;
+    cursor: pointer;
+}
+.hover-team:hover
+{
+
+    opacity: 0.8;
+    color: #f9f9f9;
+}
+
+.team-content
+{
+    position: absolute;
+
+width: 1190px;
+margin-left: 360px;
+}
+.footer p
+{
+    display: inline-block;
+    font-size: 25px;
+    color: white;
+
+}
+.footer
+{
+    background-color:darkcyan ;
+    text-align: center;
+}
